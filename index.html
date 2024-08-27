@@ -5,13 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Biker Zone</title>
+  <!-- Font Awesome CMD -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Google fonts CMD -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
-  <!-- DaisyUI CMD -->
+  <!-- TailwindCSS and DaisyUI CMD -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com">
   </script>
@@ -22,47 +26,64 @@
     }
   </style>
   <!-- Tailwind javascript CMD -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'login': '#E76F51',
+            'bg-color': '#264653',
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body class="poppins-thin">
   <!-- Header section -->
-  <header class="md:container mx-auto">
+  <header class="bg-bg-color w-10/12 mx-auto">
+    <!-- Navigation section -->
     <nav>
-      <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-              </svg>
-            </div>
-            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><a>Home</a></li>
-              <li><a>Shop</a></li>
-              <li><a>News</a></li>
-              <li><a>Contact</a></li>
-            </ul>
-          </div>
-          <a class="font-bold text-xl">Bike Dekho</a>
+      <i class="fa-solid fa-bars block md:hidden text-right text-white pt-5 mr-4"></i>
+      <div class="lg:flex hidden dropdown w-10/12 mx-auto justify-end items-center gap-12 py-6">
+        <div class="flex justify-evenly items-center gap-5">
+          <p><a class="hover:text-yellow-400 text-white" href="">Home</a></p>
+          <p><a class="hover:text-yellow-400 text-white" href="">Shop</a></p>
+          <p><a class="hover:text-yellow-400 text-white" href="">News</a></p>
+          <p><a class="hover:text-yellow-400 text-white" href="">Contact</a></p>
         </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Home</a></li>
-            <li><a>Shop</a></li>
-            <li><a>News</a></li>
-            <li><a>Contact</a></li>
-          </ul>
+        <div>
+          <button class="btn border-none bg-login py-3 px-8"><a class="text-white" href="">Login</a></button>
         </div>
-        <a class="btn bike-primary text-white">Login</a>
-      </div>
       </div>
     </nav>
+    <!-- Header style starts -->
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-5 justify-between items-center   w-10/12 mx-auto">
+      <div class="text-white">
+        <p class="mb-5 text-xs md:text-sm text-gray-400">Computer-controlled digital transistorized with electronic
+          advance</p>
+        <h1 class="font-bold text-3xl md:text-5xl my-5">Honda CBR 300R</h1>
+        <p class="mb-6 md:text-sm text-xs text-gray-400">Amet minim mollit non deserunt ullamco est sit aliqua <br>
+          dolor do amet
+          sint. Velit
+          officia
+          consequat duis
+          enim
+          velit <br>
+          mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        <button class="text-white bg-login btn border-none py-2 px-7"><a href="">Purchase</a></button>
+      </div>
+      <div class="md:w-[552px] md:h-[447px] mt-8">
+        <img class="w-full mx-auto" src="images/slider/bike3.png" alt="Bike suzuki brand images">
+      </div>
+    </div>
   </header>
   <!-- Main section -->
-  <main class="md:container mx-auto"></main>
+  <main>
 
-
+  </main>
   <!-- Footer section -->
   <footer>
 
